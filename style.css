@@ -503,6 +503,17 @@ p {
   margin-bottom: 0;
 }
 
+.profile-link{
+    display:inline-block;
+    margin-top:18px;
+    color:#16a05d;
+    font-weight:700;
+}
+
+.profile-link:hover{
+    text-decoration:underline;
+}
+
 /* =====================================================
    News archive layout
 ===================================================== */
