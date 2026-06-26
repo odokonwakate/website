@@ -304,6 +304,24 @@ p {
     align-items: center;
     text-align: center;
   }
+  .news-layout {
+  grid-template-columns: 1fr;
+  gap: 30px;
+  }
+  
+  .news-sidebar {
+    position: static;
+  }
+  
+  .news-sidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  .news-sidebar li {
+    margin-bottom: 0;
+  }
 }
 
 /* =====================================================
