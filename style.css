@@ -536,3 +536,58 @@ p {
   color: #16a05d;
   text-decoration: underline;
 }
+
+/* =====================================================
+   Events
+===================================================== */
+
+.event-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.event-card {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 28px;
+  padding: 30px;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.event-date {
+  font-weight: 700;
+  color: #16a05d;
+}
+
+.event-content h3 {
+  font-size: 22px;
+  margin-bottom: 14px;
+}
+
+.event-detail {
+  display: block;
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.event-link {
+  display: inline-block;
+  margin-top: 18px;
+  color: #16a05d;
+  font-weight: 700;
+}
+
+.event-link:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 760px) {
+  .event-card {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
