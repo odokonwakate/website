@@ -40,12 +40,11 @@ document.addEventListener("DOMContentLoaded", () => {
         section.className = "activity-year-section";
         section.id = `year-${year}`;
 
-        const title = document.createElement("h3");
-        title.className = "activity-year";
-        title.textContent = year;
+        const yearTitle = document.createElement("h3");
+        yearTitle.className = "activity-year";
+        yearTitle.textContent = year;
 
-        const cards = document.createElement("div");
-        cards.className = "activity-year-cards";
+        section.appendChild(yearTitle);
 
         groupedActivities[year].forEach(item => {
           const article = document.createElement("article");
@@ -70,11 +69,9 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
           `;
 
-          cards.appendChild(article);
+          section.appendChild(article);
         });
 
-        section.appendChild(title);
-        section.appendChild(cards);
         activityList.appendChild(section);
       });
     })
