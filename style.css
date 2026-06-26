@@ -746,18 +746,17 @@ p {
   margin-top: 90px;
 }
 
-.alumni-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 18px;
-  list-style: none;
-  margin-top: 20px;
+.alumni-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px 25px;
+    margin-top:30px;
+    list-style:none;
 }
 
-.alumni-list li {
-  padding: 8px 16px;
-  border: 1px solid #e5e5e5;
-  border-radius: 999px;
-  background: #fafafa;
-  font-size: 15px;
+.alumni-list li{
+    padding:8px 18px;
+    background:#f6f6f6;
+    border-radius:20px;
+    font-size:16px;
 }
