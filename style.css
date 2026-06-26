@@ -21,7 +21,10 @@ img {
   vertical-align: bottom;
 }
 
-/* Header */
+/* =====================================================
+   Header
+===================================================== */
+
 .site-header {
   height: 90px;
   background: #fff;
@@ -81,7 +84,10 @@ img {
   color: #16a05d;
 }
 
-/* Hero */
+/* =====================================================
+   Hero
+===================================================== */
+
 .hero {
   height: 340px;
   background: #34495e;
@@ -111,7 +117,10 @@ img {
   opacity: 0.9;
 }
 
-/* Main */
+/* =====================================================
+   Main
+===================================================== */
+
 main {
   background: #fff;
 }
@@ -154,7 +163,10 @@ p {
   margin-bottom: 20px;
 }
 
-/* News */
+/* =====================================================
+   News
+===================================================== */
+
 .news-list {
   list-style: none;
   border-top: 1px solid #eee;
@@ -173,7 +185,10 @@ p {
   font-weight: 600;
 }
 
-/* Cards */
+/* =====================================================
+   Cards
+===================================================== */
+
 .card-list {
   display: flex;
   gap: 24px;
@@ -322,7 +337,7 @@ p {
   .news-sidebar li {
     margin-bottom: 0;
   }
-  
+
   .activities-layout {
   grid-template-columns: 1fr;
   gap: 30px;
@@ -341,6 +356,17 @@ p {
   .activities-sidebar li {
     margin-bottom: 0;
   }
+  
+  .activity-card {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  
+  .activity-card img {
+    width: 100%;
+    height: auto;
+  }
+
 }
 
 /* =====================================================
