@@ -286,3 +286,30 @@ p {
     flex-direction: column;
   }
 }
+
+/* Contact */
+.contact-box{
+    margin-top:40px;
+    padding:40px;
+    border:1px solid #e5e5e5;
+    border-radius:6px;
+    background:#fafafa;
+}
+
+.contact-box h3{
+    margin-bottom:20px;
+    font-size:22px;
+}
+
+.mail-address{
+    font-size:22px;
+    font-weight:600;
+}
+.mail-address a{
+    color:#16a05d;
+    word-break:break-all;
+}
+
+.mail-address a:hover{
+    text-decoration:underline;
+}
