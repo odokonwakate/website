@@ -10,11 +10,23 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch(jsonPath)
     .then(response => response.json())
     .then(newsItems => {
+      const makeNewsText = (item) => {
+        const detailsHtml = item.details
+          ? item.details.map(detail => `<span class="news-detail">${detail}</span>`).join("")
+          : "";
 
-      // トップページ用：最新5件だけ表示
+        const innerHtml = `
+          <span class="news-title">${item.title}</span>
+          ${detailsHtml}
+        `;
+
+        return item.url
+          ? `<a href="${item.url}" class="news-link">${innerHtml}</a>`
+          : innerHtml;
+      };
+
       if (limit) {
         const items = newsItems.slice(0, Number(limit));
-
         newsList.innerHTML = "";
 
         items.forEach(item => {
@@ -22,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
           li.innerHTML = `
             <span class="date">${item.date}</span>
-            <span>${item.text}</span>
+            <span>${makeNewsText(item)}</span>
           `;
 
           newsList.appendChild(li);
@@ -31,7 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      // お知らせ一覧ページ用：年度ごとに分類
       const groupedNews = {};
 
       newsItems.forEach(item => {
@@ -46,20 +57,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const years = Object.keys(groupedNews).sort((a, b) => b - a);
 
-      // 左側：年度リンクを作成
       if (yearList) {
         yearList.innerHTML = "";
 
         years.forEach(year => {
           const li = document.createElement("li");
-
           li.innerHTML = `<a href="#year-${year}">${year}</a>`;
-
           yearList.appendChild(li);
         });
       }
 
-      // 右側：年度ごとのお知らせを作成
       newsList.innerHTML = "";
 
       years.forEach(year => {
@@ -79,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
           li.innerHTML = `
             <span class="date">${item.date}</span>
-            <span>${item.text}</span>
+            <span>${makeNewsText(item)}</span>
           `;
 
           ul.appendChild(li);
