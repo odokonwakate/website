@@ -62,17 +62,9 @@
   <section class="container">
     <span class="section-title-en">News</span>
     <h2>お知らせ</h2>
-  
-    <ul class="news-list">
-      <li>
-        <span class="date">2026.06.26</span>
-        <span>応用動物昆虫学会 若手の会ホームページを公開しました。</span>
-      </li>
-  
-      <li>
-        <span class="date">2025.06.01</span>
-        <span>応用動物昆虫学会 若手の会を設立しました。</span>
-      </li>
+      
+    <ul class="news-list" id="news-list" data-json="data/news.json" data-limit="5">
+      <li>お知らせを読み込み中...</li>
     </ul>
   
     <p class="more-link">
@@ -115,5 +107,7 @@
   </div>
 </footer>
 
+<script src="js/load-news.js"></script>
+  
 </body>
 </html>
