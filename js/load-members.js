@@ -22,8 +22,12 @@ document.addEventListener("DOMContentLoaded", () => {
           ? `<a class="profile-link" href="${member.profile_url}" target="_blank" rel="noopener">プロフィール →</a>`
           : "";
         
+        const imageSrc = member.image
+          ? `../assets/images/members/${member.image}`
+          : "../assets/images/members/_nanashi.png";
+        
         card.innerHTML = `
-          <img src="../assets/images/members/${member.image}" alt="${member.name}" class="member-photo">
+          <img src="${imageSrc}" alt="${member.name}" class="member-photo">
         
           <div class="member-info">
             <h3>${member.name}</h3>
