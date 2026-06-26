@@ -367,6 +367,13 @@ p {
     height: auto;
   }
 
+  .activity-photo-gallery {
+  grid-template-columns: 1fr;
+  }
+  
+  .activity-photo-gallery img {
+    height: auto;
+  }
 }
 
 /* =====================================================
