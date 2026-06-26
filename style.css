@@ -439,3 +439,60 @@ p {
   color: #666;
   margin-bottom: 0;
 }
+
+/* =====================================================
+   News archive layout
+===================================================== */
+
+.news-layout {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 60px;
+}
+
+.news-sidebar {
+  position: sticky;
+  top: 120px;
+  align-self: start;
+  padding: 24px;
+  background: #fafafa;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+}
+
+.news-sidebar h3 {
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+.news-sidebar ul {
+  list-style: none;
+}
+
+.news-sidebar li {
+  margin-bottom: 10px;
+}
+
+.news-sidebar a {
+  color: #555;
+  font-weight: 700;
+}
+
+.news-sidebar a:hover {
+  color: #16a05d;
+}
+
+.news-year-section {
+  margin-bottom: 55px;
+}
+
+.news-year {
+  font-size: 28px;
+  margin-bottom: 24px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #16a05d;
+}
+
+.news-year::after {
+  display: none;
+}
