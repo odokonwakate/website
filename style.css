@@ -322,6 +322,25 @@ p {
   .news-sidebar li {
     margin-bottom: 0;
   }
+  
+  .activities-layout {
+  grid-template-columns: 1fr;
+  gap: 30px;
+  }
+  
+  .activities-sidebar {
+    position: static;
+  }
+  
+  .activities-sidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  .activities-sidebar li {
+    margin-bottom: 0;
+  }
 }
 
 /* =====================================================
@@ -590,4 +609,67 @@ p {
     grid-template-columns: 1fr;
     gap: 12px;
   }
+}
+
+/* =====================================================
+   Activities archive layout
+===================================================== */
+
+.activities-layout {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 60px;
+}
+
+.activities-sidebar {
+  position: sticky;
+  top: 120px;
+  align-self: start;
+  padding: 24px;
+  background: #fafafa;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+}
+
+.activities-sidebar h3 {
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+.activities-sidebar ul {
+  list-style: none;
+}
+
+.activities-sidebar li {
+  margin-bottom: 10px;
+}
+
+.activities-sidebar a {
+  color: #555;
+  font-weight: 700;
+}
+
+.activities-sidebar a:hover {
+  color: #16a05d;
+}
+
+.activity-year-section {
+  margin-bottom: 60px;
+}
+
+.activity-year {
+  font-size: 28px;
+  margin-bottom: 28px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #16a05d;
+}
+
+.activity-year::after {
+  display: none;
+}
+
+.activity-year-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
