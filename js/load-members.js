@@ -18,14 +18,19 @@ document.addEventListener("DOMContentLoaded", () => {
         const card = document.createElement("div");
         card.className = "member-card";
 
+        const profileButton = member.profile_url
+          ? `<a class="profile-link" href="${member.profile_url}" target="_blank" rel="noopener">プロフィール →</a>`
+          : "";
+        
         card.innerHTML = `
           <img src="../assets/images/members/${member.image}" alt="${member.name}" class="member-photo">
-
+        
           <div class="member-info">
             <h3>${member.name}</h3>
             <p class="member-affiliation">${member.affiliation}</p>
             <p class="member-role">${member.role}</p>
             <p class="member-fields">${member.fields}</p>
+            ${profileButton}
           </div>
         `;
 
