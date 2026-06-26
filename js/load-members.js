@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const memberList = document.getElementById("member-list");
+  const alumniList = document.getElementById("alumni-list");
 
   if (!memberList) return;
 
@@ -7,7 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   fetch(jsonPath)
     .then(response => response.json())
-    .then(members => {
+    .then(data => {
+      const members = data.current || [];
+      const alumni = data.alumni || [];
+
       memberList.innerHTML = "";
 
       members.forEach(member => {
@@ -16,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         card.innerHTML = `
           <img src="../assets/images/members/${member.image}" alt="${member.name}" class="member-photo">
-        
+
           <div class="member-info">
             <h3>${member.name}</h3>
             <p class="member-affiliation">${member.affiliation}</p>
@@ -27,9 +31,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
         memberList.appendChild(card);
       });
+
+      if (alumniList) {
+        alumniList.innerHTML = "";
+
+        alumni.forEach(name => {
+          const li = document.createElement("li");
+          li.textContent = name;
+          alumniList.appendChild(li);
+        });
+      }
     })
     .catch(error => {
       console.error("Members loading error:", error);
       memberList.innerHTML = "<p>メンバー情報を読み込めませんでした。</p>";
+      if (alumniList) {
+        alumniList.innerHTML = "<li>歴代メンバー情報を読み込めませんでした。</li>";
+      }
     });
 });
