@@ -659,8 +659,8 @@ p {
 
 .activity-year {
   font-size: 28px;
-  margin-bottom: 28px;
-  padding-bottom: 10px;
+  margin-bottom: 25px;
+  padding-bottom: 12px;
   border-bottom: 2px solid #16a05d;
 }
 
@@ -668,8 +668,46 @@ p {
   display: none;
 }
 
-.activity-year-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+.activity-card {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 48px;
+  padding: 35px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.activity-card img {
+  width: 300px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.activity-content {
+  flex: 1;
+}
+
+.activity-date {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.activity-content h3 {
+  font-size: 26px;
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+
+.activity-content p {
+  margin-bottom: 22px;
+}
+
+.activity-link {
+  color: #16a05d;
+  font-weight: 700;
+}
+
+.activity-link:hover {
+  text-decoration: underline;
 }
