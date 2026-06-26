@@ -737,3 +737,27 @@ p {
 .activity-link:hover {
   text-decoration: underline;
 }
+
+/* =====================================================
+   Alumni
+===================================================== */
+
+.alumni-section {
+  margin-top: 90px;
+}
+
+.alumni-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  list-style: none;
+  margin-top: 20px;
+}
+
+.alumni-list li {
+  padding: 8px 16px;
+  border: 1px solid #e5e5e5;
+  border-radius: 999px;
+  background: #fafafa;
+  font-size: 15px;
+}
