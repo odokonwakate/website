@@ -471,7 +471,7 @@ p {
   width: 150px;
   height: 150px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 10px;
   flex-shrink: 0;
 }
 
