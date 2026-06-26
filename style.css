@@ -198,7 +198,10 @@ p {
   margin-bottom: 0;
 }
 
-/* Links */
+/* =====================================================
+   Links
+===================================================== */
+
 .more-link {
   margin-top: 28px;
 }
@@ -209,7 +212,10 @@ p {
   border-bottom: 1px solid #16a05d;
 }
 
-/* Footer */
+/* =====================================================
+   Footer
+===================================================== */
+
 .site-footer {
   border-top: 1px solid #e5e5e5;
   background: #fafafa;
@@ -233,7 +239,10 @@ p {
   margin-bottom: 0;
 }
 
-/* Responsive */
+/* =====================================================
+   Responsive
+===================================================== */
+
 @media screen and (max-width: 760px) {
   .site-header {
     height: auto;
@@ -287,7 +296,10 @@ p {
   }
 }
 
-/* Contact */
+/* =====================================================
+   Contact
+===================================================== */
+
 .contact-box{
     margin-top:40px;
     padding:40px;
@@ -311,5 +323,54 @@ p {
 }
 
 .mail-address a:hover{
+    text-decoration:underline;
+}
+
+/* =====================================================
+   Activities
+===================================================== */
+
+.activity-card{
+    display:flex;
+    gap:35px;
+    margin-bottom:60px;
+    padding-bottom:50px;
+    border-bottom:1px solid #e8e8e8;
+}
+
+.activity-card img{
+    width:280px;
+    height:180px;
+    object-fit:cover;
+    border-radius:6px;
+    flex-shrink:0;
+}
+
+.activity-content{
+    flex:1;
+}
+
+.activity-date{
+    color:#888;
+    font-size:14px;
+    margin-bottom:10px;
+}
+
+.activity-content h3{
+    font-size:28px;
+    margin-bottom:18px;
+    line-height:1.5;
+}
+
+.activity-content p{
+    margin-bottom:22px;
+}
+
+.activity-link{
+    color:#16a05d;
+    font-weight:700;
+}
+
+.activity-link:hover{
     text-decoration:underline;
 }
