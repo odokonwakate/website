@@ -42,8 +42,9 @@
       "name": "仲川 幹映",
       "affiliation": "明治大学",
       "role": "イベント",
-      "fields": "イエバエ",
-      "image": "nanashi.png"
+      "fields": "イエバエ / ネッタイシマカ / 殺虫剤抵抗性",
+      "image": "Nakagawa.jpg",
+      "profile_url": "https://researchmap.jp/Musca_mikie"
     },
     {
       "name": "大迫 朋寛",
@@ -62,9 +63,16 @@
     {
       "name": "原田 彪吾",
       "affiliation": "東京農工大学",
-      "role": "イベント",
+      "role": "イベント・ホームページ",
       "fields": "チビタマムシ / 休眠",
       "image": "Harada.jpg"
+    },
+    {
+      "name": "小田 咲",
+      "affiliation": "東京大学",
+      "role": "イベント",
+      "fields": "アリ / 共生細菌",
+      "image": "Oda.jpg"
     }
   ],
   "alumni": [
